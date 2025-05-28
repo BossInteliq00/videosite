@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MULT архив</title>
+  <link rel="icon" href="images/icon.jpeg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav.moving-message {
+      height: 50px;
+      background-color: #fff5c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .moving-message .message {
+      position: absolute;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideInOut 12s linear infinite;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @keyframes slideInOut {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      15% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      70% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      85% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4a00e0;
+    }
+
+    .mult-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .mult-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .mult-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .mult-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .mult-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .mult-card a {
+      display: inline-block;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #4a00e0;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .mult-card a:hover {
+      color: #8e2de2;
+    }
+
+    footer {
+      background: #4a00e0;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .mult-card img {
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MULT архив</h1>
+</header>
+
+<nav class="moving-message">
+  <div class="message" id="movingText">Жүктелуде...</div>
+</nav>
+
+<main>
+  <h2>🎬 Мультсериалдар бөлімі</h2>
+  <div class="mult-container">
+    <div class="mult-card">
+      <img src="images/thumb1.jpeg" alt="Зак дауыл">
+      <h3>Зак дауыл</h3>
+      <a href="video1.html">Көру</a>
+    </div>
+    <div class="mult-card">
+      <img src="images/thumb2.jpeg" alt="Джекичан">
+      <h3>Джекичанның бастан кешкендері</h3>
+      <a href="video2.html">Көру</a>
+    </div>
+    <div class="mult-card">
+      <img src="images/thumb3.jpeg" alt="Мен және менің роботым">
+      <h3>Мен және менің роботым</h3>
+      <a href="video3.html">Көру</a>
+    </div>
+    <div class="mult-card">
+      <img src="images/thumb4.jpeg" alt="Тобот">
+      <h3>Тобот</h3>
+      <a href="video4.html">Көру</a>
+    </div>
+    <div class="mult-card">
+      <img src="images/thumb5.jpeg" alt="Лесси">
+      <h3>Лесси</h3>
+      <a href="video5.html">Көру</a>
+    </div>
+<div class="mult-card">
+      <img src="images/thumb6.jpeg" alt="Экстрималды футбол">
+      <h3>Экстрималды футбол</h3>
+      <a href="video6.html">Көру</a>
+    </div>
+<div class="mult-card">
+      <img src="images/thumb7.jpeg" alt="Саяхатшы Дара">
+      <h3>Саяхатшы Дара</h3>
+      <a href="video7.html">Көру</a>
+    </div>
+<div class="mult-card">
+      <img src="images/thumb8.jpeg" alt="Батыл Балақай">
+      <h3>Жеңімпаз жеткеншектер</h3>
+      <a href="video8.html">Жуырда</a>
+    </div>
+  </div>
+  </div>
+</main>
+
+<footer>
+  <p>Менің парақшаларым:</p>
+  <a href="https://www.instagram.com/bossinteliq?igsh=N256cmhyMWh6N2Jx" target="_blank">Instagram</a> |
+  <a href="https://t.me/multarhivbalapan" target="_blank">Telegram</a> |
+  <a href="https://youtube.com/@multialem?si=f9xgpyLV3Pkrb0ku" target="_blank">YouTube</a>
+</footer>
+
+<script>
+  const messages = [
+    "Менің парақшаларыма өтіп жарнама бере аласыздар",
+    "Менің жасаған мобильді қосымшамды орнатып ала аласыздар, орнату үшін телеграм арнама өтіңіздер.",
+    "Осы сайттан сіздер мультсериалдарды тегін тамашалай аласыздар",
+    "Әр апта сайын жаңа мультсериалдар жарияланады",
+    "Осы мультсериалдардың бөлімдері толық жарияланбаған болса жуырда жарияланады немесе YouTube желісінде бар болғаны",
+    "Тағы қандай мультсериалдарды қосқанымды қалайсыздар – менің инстаграм парақшама жазыңыздар!"
+  ];
+
+  const textElement = document.getElementById('movingText');
+  let index = 0;
+
+  function updateMessage() {
+    textElement.textContent = messages[index];
+    index = (index + 1) % messages.length;
+  }
+
+  updateMessage();
+  setInterval(updateMessage, 12000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тобот</title>
+  <link rel="icon" href="images/icon.jpeg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4A00E0, #8E2DE2);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .series-list button {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .series-list button:hover {
+      background-color: #4A00E0;
+    }
+
+    video {
+      width: 90%;
+      max-width: 720px;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #4A00E0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MULT архив</h1>
+  </header>
+
+  <main>
+    <h2>Тобот</h2>
+
+    <div class="series-list">
+      <button onclick="loadVideo('video/tobot/video4-episode1.mp4')">1-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode2.mp4')">2-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode3.mp4')">3-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode4.mp4')">4-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode5.mp4')">5-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode6.mp4')">6-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode7.mp4')">7-серия</button>
+      <button onclick="loadVideo('video/tobot/video4-episode8.mp4')">8-серия</button>
+    </div>
+
+    <video id="videoPlayer" controls>
+      <source src="video/tobot/video4-episode1.mp4" type="video/mp4" />
+      Сіздің браузер видео ойнатуды қолдамайды.
+    </video>
+
+    <div>
+      <a href="index.html" class="back">← Артқа қайту</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Менің парақшаларым:</p>
+    <a href="https://www.instagram.com/bossinteliq?igsh=N256cmhyMWh6N2Jx" target="_blank">Instagram</a> |
+    <a href="https://t.me/multarhivbalapan" target="_blank">Telegram</a> |
+    <a href="https://youtube.com/@multialem?si=f9xgpyLV3Pkrb0ku" target="_blank">YouTube</a>
+  </footer>
+
+  <script>
+    function loadVideo(src) {
+      const player = document.getElementById('videoPlayer');
+      player.src = src;
+      player.load();
+      player.play();
+    }
+  </script>
+
+</body>
+</html>
